@@ -16,12 +16,12 @@ describe('js-foundation/06-promises.ts', () => {
 
         const pokemonId = 100000000;
 
-        try{
+        try {
             await getPokemonById( pokemonId );
-            expect(true).toBeFalsy();
-
-        }catch( error ){
-            throw `Pokemon not found with id ${ pokemonId }`;
+            expect( true ).toBeFalsy();
+        
+        } catch (error) {
+            expect( error ).toBe(`Pokemon not found with id ${ pokemonId }`);
         }
 
     });
